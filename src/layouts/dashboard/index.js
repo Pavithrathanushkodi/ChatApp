@@ -1,12 +1,22 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet , Navigate} from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
+import { Stack } from "@mui/material";
+import SideBar from "./SideBar"
+
+
+const isAuthenticated = true;
 
 const DashboardLayout = () => {
-
-  return (
+  if(!isAuthenticated){
+    return <Navigate to = "/auth/login"/>
+  }
+return (
     <>
-      Dashboard Layout
-      <Outlet />
+      <Stack direction="row">
+        <SideBar/>
+        <Outlet />
+      </Stack>
     </>
   );
 };

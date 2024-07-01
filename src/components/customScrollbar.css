@@ -1,0 +1,24 @@
+/* customScrollbar.css */
+
+.visible-scrollbar .simplebar-scrollbar::before {
+    background-color: #afb3ba;
+    border-radius: 10px;
+    width: 8px;
+  }
+  
+  .simplebar-track.simplebar-vertical {
+    width: 8px;
+  }
+  
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar {
+    background: #e0e4ec;
+  }
+  
+  .simplebar-track.simplebar-horizontal {
+    height: 8px;
+  }
+  
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    background: #a3a4a5;
+  }
+  
